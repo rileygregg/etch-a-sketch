@@ -1,0 +1,32 @@
+/* Main Title */
+.title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Container For Boxes */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px;
+    border-color: black;
+}
+
+/* Inividual Boxes */
+.row-boxes {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 3px;
+}
+
+.column-boxes {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 3px;
+}
