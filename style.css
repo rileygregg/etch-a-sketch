@@ -6,27 +6,37 @@
 }
 
 /* Container For Boxes */
-#container {
+.container-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px;
-    border-color: black;
+    height: 20px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 2px;
+    margin-bottom: 5px;
+    gap: 5px;
+    flex: 1;
+}
+
+.container-inner {
+    border-style: solid;
+    border-color: red;
 }
 
 /* Inividual Boxes */
 .row-boxes {
     width: 30px;
-    height: 30px;
     border-style: solid;
     border-color: lightgray;
     border-width: 3px;
+    flex: 1;
 }
 
-.column-boxes {
+/* .column-boxes {
     width: 30px;
     height: 30px;
     border-style: solid;
     border-color: lightgray;
     border-width: 3px;
-}
+} */
