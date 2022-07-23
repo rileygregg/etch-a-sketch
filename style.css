@@ -5,38 +5,21 @@
     font-weight: bold;
 }
 
-/* Container For Boxes */
-.container-main {
+.main-area {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 20px;
-    border-style: solid;
-    border-color: lightgrey;
-    border-width: 2px;
-    margin-bottom: 5px;
-    gap: 5px;
-    flex: 1;
 }
-
-.container-inner {
-    border-style: solid;
-    border-color: red;
+/* Container For Boxes */
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: auto;
+    gap: 1px;
+    width: 400px;
+    height: 400px;
 }
 
 /* Inividual Boxes */
-.row-boxes {
-    width: 30px;
-    border-style: solid;
-    border-color: lightgray;
-    border-width: 3px;
-    flex: 1;
+.cell {
+    border: 1px solid black;
 }
-
-/* .column-boxes {
-    width: 30px;
-    height: 30px;
-    border-style: solid;
-    border-color: lightgray;
-    border-width: 3px;
-} */
