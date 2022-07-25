@@ -17,6 +17,14 @@
     display: flex;
     justify-content: center;
 }
+
+.colors {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 22px;
+}
+
 /* Container For Boxes */
 #container {
     display: grid;
