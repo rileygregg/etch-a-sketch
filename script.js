@@ -1,22 +1,35 @@
 const container = document.getElementById("container");
-let rows = document.getElementsByClassName("gridRow");
+let cell;
+let sixteen = document.querySelector(".button");
+let sixtyFour = document.querySelector(".button-two");
 
-let cells = document.getElementsByClassName("cell");
+// Change grid size on click of button
+sixteen.addEventListener("click", function () {
+    makeCells(256);
 
-// Creates a default grid sized 16x16
-function defaultGrid() {
-    makeRow(16);
-    makeColumns(16);
-}
+    sixteen.disabled = true;
+    sixtyFour.disabled = true;
+});
 
-// Takes (rows, columns) input and makes a grid
+sixtyFour.addEventListener("click", function () {
+    makeCells(4096);
+
+    container.style.gridTemplateColumns = "repeat(64, 1fr)";
+    container.style.gridTemplateRows = "auto";
+
+    sixteen.disabled = true;
+    sixtyFour.disabled = true;
+});
+
+// Takes number of cells input and makes a grid
 function makeCells(cellNum) {
     // Creates rows
-    for (let r = 0; r < cellNum; r++) {
-        let cell = document.createElement("div");
-        cell.classList.add("cell");
+    for (let i = 0; i < cellNum; i++) {
+        const cell = document.createElement("div");
         container.appendChild(cell).className = "cell";
+
+        cell.addEventListener("mouseover", function () {
+            cell.style.backgroundColor = "black";
+        });
     }
 }
-
-makeCells(256);
