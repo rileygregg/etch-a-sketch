@@ -31,13 +31,6 @@ resetButton.addEventListener("click", function () {
     window.location.reload();
 });
 
-blackWhite.addEventListener("click", function () {
-    cell.style.backgroundColor = "black";
-});
-
-techno.addEventListener("click", function () {
-    cell.style.background = "black";
-});
 // set the reset button function
 // function resetButton() {
 //     window.location.reload();
@@ -50,9 +43,21 @@ function makeCells(cellNum) {
         const cell = document.createElement("div");
         container.appendChild(cell).className = "cell";
 
-        cell.addEventListener("mouseover", function () {
-            cell.style.backgroundColor = randomColor();
-        });
+        if ((blackWhite.selected = true)) {
+            blackWhite.addEventListener("click", function () {
+                cell.addEventListener("mouseover", function () {
+                    cell.style.backgroundColor = "black";
+                });
+            });
+        }
+
+        if ((techno.selected = true)) {
+            techno.addEventListener("click", function () {
+                cell.addEventListener("mouseover", function () {
+                    cell.style.backgroundColor = randomColor();
+                });
+            });
+        }
     }
 }
 
